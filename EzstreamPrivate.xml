@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<ezstream>
+
+  <servers>
+    <server>
+      <hostname>192.168.178.143</hostname>
+      <port>8000</port>
+      <user>source</user>
+      <password>***</password>
+    </server>
+  </servers>
+
+  <streams>
+    <stream>
+      <mountpoint>/private.ogg</mountpoint>
+      <intake>Private Stream Guisveld</intake>
+      <format>Ogg</format>
+    </stream>
+  </streams>
+
+  <intakes>
+    <intake>
+      <name>Private Stream Guisveld</name>
+      <filename>/etc/ezstream/PlayList.txt</filename>
+      <shuffle>Yes</shuffle>
+    </intake>
+  </intakes>
+
+  <metadata>
+    <format_str>@a@ - @t@</format_str>
+    <refresh_interval>-1</refresh_interval>
+    <normalize_strings>Yes</normalize_strings>
+    <no_updates>Yes</no_updates>
+  </metadata>
+
+</ezstream>

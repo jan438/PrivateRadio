@@ -1,0 +1,53 @@
+﻿<icecast>
+    <location>Zaandijk</location>
+    <admin>jan@192.168.178.143</admin>
+    <limits>
+        <clients>100</clients>
+        <sources>2</sources>
+        <queue-size>524288</queue-size>
+        <client-timeout>30</client-timeout>
+        <header-timeout>15</header-timeout>
+        <source-timeout>10</source-timeout>
+        <burst-on-connect>1</burst-on-connect>
+        <burst-size>65535</burst-size>
+    </limits>
+    <authentication>
+        <source-password>***</source-password>
+        <relay-password>***</relay-password>
+        <admin-user>jan</admin-user>
+        <admin-password>***</admin-password>
+    </authentication>
+    <hostname>192.168.178.143</hostname>
+    <listen-socket>
+        <port>8000</port>
+    </listen-socket>
+    <mount>
+	<mount-name>/private.ogg</mount-name>
+	    <authentication type="url">
+		<option name="username" value="jan"/>
+		<option name="password" value="***"/>
+		<option name="stream_auth" value="http://192.168.178.143/PrivateRadio/PrivateRadio.php"/>
+		<option name="allow_duplicate_users" value="0"/>
+	    </authentication>
+    </mount>
+    <http-headers>
+        <header name="Access-Control-Allow-Origin" value="*" />
+    </http-headers>
+    <fileserve>1</fileserve>
+    <paths>
+        <basedir>/usr/share/icecast2</basedir>
+        <logdir>/var/log/icecast2</logdir>
+        <webroot>/usr/share/icecast2/web</webroot>
+        <adminroot>/usr/share/icecast2/admin</adminroot>
+        <alias source="/" destination="/status.xsl"/>
+    </paths>
+    <logging>
+        <accesslog>access.log</accesslog>
+        <errorlog>error.log</errorlog>
+        <loglevel>3</loglevel>
+        <logsize>10000</logsize>
+    </logging>
+    <security>
+        <chroot>0</chroot>
+    </security>
+</icecast>
